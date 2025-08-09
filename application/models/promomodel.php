@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 #[\AllowDynamicProperties]
-class promomodel extends CI_Model {
+class Promomodel extends CI_Model {
 
     protected $table = 'promo';
 

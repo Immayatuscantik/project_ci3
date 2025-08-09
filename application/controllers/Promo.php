@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 #[\AllowDynamicProperties]
-class promocontroller extends CI_Controller {
+class Promo extends CI_Controller {
 
     public function __construct()
     {
@@ -52,12 +52,12 @@ class promocontroller extends CI_Controller {
         );
 
         $this->promomodel->insert_data($data); // method insert_data dibuat di model
-        redirect('promocontroller');
+        redirect('Promocontroller');
     }
 
     public function delete($id)
     {
         $this->promomodel->delete_data($id); // method delete_data dibuat di model
-        redirect('promocontroller');
+        redirect('Promocontroller');
     }
 }

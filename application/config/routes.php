@@ -1,25 +1,25 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$route['default_controller'] = 'admincontroller/login';
+$route['default_controller'] = 'Admincontroller/login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 // AUTH
-$route['login'] = 'admincontroller/doLogin';
-$route['logout'] = 'admincontroller/logout';
+$route['login'] = 'Admincontroller/kategori';
+$route['logout'] = 'Admincontroller/logout';
 
 // DASHBOARD
-$route['dashboard'] = 'kategoricontroller/index';
+$route['dashboard'] = 'Kategoricontroller/index';
 
 // KATEGORI
-$route['kategori'] = 'kategoricontroller/index';
-$route['admin/kategori/create'] = 'kategoricontroller/create';
-$route['kategori/save'] = 'kategoricontroller/save';
-$route['kategori/delete/(:num)'] = 'kategoricontroller/delete/$1';
+$route['kategori'] = 'Kategoricontroller/index';
+$route['admin/kategori/create'] = 'Kategoricontroller/create';
+$route['kategori/save'] = 'Kategoricontroller/save';
+$route['kategori/delete/(:num)'] = 'Kategoricontroller/delete/$1';
 
 // PROMO
-$route['promo'] = 'promocontroller/index';
-$route['promo/create'] = 'promocontroller/create';
-$route['admin/promo/save'] = 'promocontroller/save';
-$route['promo/delete/(:num)'] = 'promocontroller/delete/$1';
+$route['promo'] = 'Promocontroller/index';
+$route['promo/create'] = 'Promocontroller/create';
+$route['admin/promo/save'] = 'Promocontroller/save';
+$route['promo/delete/(:num)'] = 'Promocontroller/delete/$1';

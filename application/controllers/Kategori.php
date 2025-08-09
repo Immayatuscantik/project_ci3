@@ -1,19 +1,20 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 #[\AllowDynamicProperties]
-class kategoricontroller extends CI_Controller {
+class Kategori extends CI_Controller {
+    
+    public function index()
+    {
+        $data['kategori'] = $this->kategorimodel->get_all(); // kita sesuaikan dengan fungsi CI3 di model
+        
+        // $this->load->view('admin/kategori/index', $data);
+    }
 
     public function __construct()
     {
         parent::__construct();
         $this->load->model('kategorimodel');
         $this->load->helper(array('form', 'url')); // agar form helper & redirect berfungsi
-    }
-
-    public function index()
-    {
-        $data['kategori'] = $this->kategorimodel->get_all(); // kita sesuaikan dengan fungsi CI3 di model
-        $this->load->view('admin/kategori/index', $data);
     }
 
     public function create()
@@ -32,12 +33,12 @@ class kategoricontroller extends CI_Controller {
         );
 
         $this->kategorimodel->insert_data($data); // Fungsi insert_data harus dibuat di model
-        redirect('kategoricontroller');
+        redirect('Kategoricontroller');
     }
 
     public function delete($id)
     {
         $this->kategorimodel->delete_data($id); // Fungsi delete_data harus dibuat di model
-        redirect('kategoricontroller');
+        redirect('Kategoricontroller');
     }
 }

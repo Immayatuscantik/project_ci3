@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 #[\AllowDynamicProperties]
-class ddminmodel extends CI_Model {
+class Adminmodel extends CI_Model {
 
     public function __construct()
     {

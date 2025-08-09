@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 #[\AllowDynamicProperties]
-class kategorimodel extends CI_Model {
+class Kategorimodel extends CI_Model {
 
     protected $table = 'kategori';
 
